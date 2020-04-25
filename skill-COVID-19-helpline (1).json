@@ -1,0 +1,822 @@
+{
+  "intents": [
+    {
+      "intent": "enquiry",
+      "examples": [
+        {
+          "text": "how will i get food"
+        },
+        {
+          "text": "where can i get home or food"
+        },
+        {
+          "text": "can I get some food"
+        },
+        {
+          "text": "Could u please help me to find some food or shelter"
+        },
+        {
+          "text": "where else i can find food"
+        },
+        {
+          "text": "where could i find food"
+        },
+        {
+          "text": "could you find some food"
+        },
+        {
+          "text": "I want shelter"
+        },
+        {
+          "text": "I'm looking for home"
+        },
+        {
+          "text": "how can i get food"
+        },
+        {
+          "text": "where is shelter"
+        },
+        {
+          "text": "food"
+        }
+      ]
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "Good Evening"
+        },
+        {
+          "text": "Good afternoon"
+        },
+        {
+          "text": "Hello"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "city",
+      "examples": [
+        {
+          "text": "I'm in AP"
+        },
+        {
+          "text": "I live in Andhra Pradesh"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "General_About_You",
+      "examples": [
+        {
+          "text": "How can I configure you?"
+        },
+        {
+          "text": "About you"
+        },
+        {
+          "text": "Can I use another language?"
+        },
+        {
+          "text": "Describe your self"
+        },
+        {
+          "text": "Do you have a name?"
+        },
+        {
+          "text": "Do you know who you are?"
+        },
+        {
+          "text": "How do you function?"
+        },
+        {
+          "text": "How old are you?"
+        },
+        {
+          "text": "I want to set up the chat bot for my shop"
+        },
+        {
+          "text": "Introduce your self"
+        },
+        {
+          "text": "Let us talk about you"
+        },
+        {
+          "text": "Tell me about your life"
+        },
+        {
+          "text": "Tell me something about yourself"
+        },
+        {
+          "text": "What languages do you speak?"
+        },
+        {
+          "text": "What should I know about you?"
+        },
+        {
+          "text": "What's your name?"
+        },
+        {
+          "text": "Where are you from?"
+        },
+        {
+          "text": "Where were you born?"
+        },
+        {
+          "text": "Who are you?"
+        },
+        {
+          "text": "Why are you here?"
+        }
+      ],
+      "description": "Request generic personal attributes."
+    },
+    {
+      "intent": "details",
+      "examples": [
+        {
+          "text": "location is here"
+        },
+        {
+          "text": "name is satya"
+        },
+        {
+          "text": "I'm at this place"
+        },
+        {
+          "text": "my name is satya"
+        },
+        {
+          "text": "I'm from here"
+        },
+        {
+          "text": "Repalle"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sys-person",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-location",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "shelter",
+          "synonyms": [
+            "house",
+            "home",
+            "household",
+            "apartment",
+            "room",
+            "penthouse",
+            "appartment",
+            "bungalow",
+            "hostel"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "food",
+          "synonyms": [
+            "hungry",
+            "eat",
+            "foods",
+            "meals",
+            "starving",
+            "meal"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Hi",
+          "synonyms": [
+            "hi",
+            "hey",
+            "hii",
+            "hai",
+            "hola"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Afternoon",
+          "synonyms": [
+            "Gud afternoon",
+            "good afternoon",
+            "goodafternoon"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Evening",
+          "synonyms": [
+            "Gud evng",
+            "good evening",
+            "goodevening",
+            "gudevng"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Morning",
+          "synonyms": [
+            "Gud morning",
+            "good morning",
+            "goodmorning",
+            "Gud Mng",
+            "morning",
+            "g'morning"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Hello",
+          "synonyms": [
+            "hello",
+            "helloo",
+            "hallo",
+            "hellooo",
+            "helloooo",
+            "hellooooo"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "salutation",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Okay",
+          "synonyms": [
+            "okay",
+            "ok",
+            "alright",
+            "hmmm",
+            "hmm"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Thank You",
+          "synonyms": [
+            "thanks",
+            "thankyou",
+            "thank you",
+            "thank u",
+            "thank",
+            "thanx",
+            "thx",
+            "thks",
+            "thnx",
+            "tks"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "details",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "place",
+          "synonyms": [
+            "from",
+            "location",
+            "locality",
+            "area"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "name",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "city",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Andhra Pradesh",
+          "synonyms": [
+            "ap",
+            "Andhrapradesh",
+            "A.P.",
+            "A.P",
+            "nalgonda",
+            "srikakulam",
+            "kurnool",
+            "vizianagaram",
+            "chittoor",
+            "anantapur",
+            "nellore",
+            "kadapa",
+            "khammam",
+            "prakasam",
+            "guntur",
+            "vijayawada",
+            "ongole",
+            "visakhapatnam",
+            "rajahmundry",
+            "vizag",
+            "eluru",
+            "ramanathapuram",
+            "kakinada",
+            "pulivendula",
+            "vishakapatnam",
+            "machilipatnam",
+            "vijaywada",
+            "bhimavaram",
+            "nandyal",
+            "tirupathi",
+            "andhra",
+            "rayalaseema",
+            "seemandhra"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "TamilNadu",
+          "synonyms": [
+            "tamilnadu",
+            "TN",
+            "virudhunagar",
+            "coimbatore",
+            "dharmapuri",
+            "tirunelveli",
+            "madurai",
+            "ramanathapuram",
+            "villupuram",
+            "tiruchi",
+            "kancheepuram",
+            "tiruchy",
+            "paramakudi",
+            "dindigul",
+            "kovilpatti",
+            "krishnagiri",
+            "tiruvarur",
+            "tennessee",
+            "tiruchirapalli",
+            "cuddalore",
+            "perambalur"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Telangana",
+          "synonyms": [
+            "telangana",
+            "TS",
+            "telengana",
+            "nandigram",
+            "kalinganagar",
+            "hyderabad",
+            "hyd",
+            "warangal",
+            "nalgonda",
+            "mahabubnagar",
+            "mahbubnagar",
+            "mahaboobnagar",
+            "proddatur",
+            "sangareddy",
+            "hanamkonda",
+            "bhongir",
+            "kothagudem",
+            "nizamabad"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    },
+    "from-sample": true
+  },
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do you want Shelter "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1587748988875",
+      "context": {
+        "place": "@sys-location"
+      },
+      "disabled": true,
+      "conditions": "@sys-location",
+      "dialog_node": "response_1_1587789312267"
+    },
+    {
+      "type": "standard",
+      "title": "City",
+      "parent": "node_2_1587747999620",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@city",
+      "dialog_node": "node_9_1587758632652"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Okay .May I know your good name? "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1587748202297",
+      "conditions": "@enquiry:shelter",
+      "dialog_node": "response_9_1587748424555",
+      "previous_sibling": "node_2_1587747999620"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Oh! Okay . Where are you now?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1587748202297",
+      "conditions": "@enquiry:food",
+      "dialog_node": "response_3_1587748381596",
+      "previous_sibling": "response_9_1587748424555"
+    },
+    {
+      "type": "standard",
+      "title": "UserName",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello $name,Could You Tell your present State?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1587748202297",
+      "context": {
+        "name": "@sys-person"
+      },
+      "conditions": "@sys-person",
+      "dialog_node": "node_2_1587747999620"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Okay. Telangana government proving a local shelters/food at Hyderabad"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1587758632652",
+      "conditions": "@city:Telangana",
+      "dialog_node": "response_1_1587807198761",
+      "previous_sibling": "response_3_1587807181064"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Okay. TamilNadu government proving a local shelters/food at Anna Nagar"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_9_1587758632652",
+      "conditions": "@city:TamilNadu",
+      "dialog_node": "response_9_1587807260593",
+      "previous_sibling": "response_1_1587807198761"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Okay. Andhra Pradesh government proving a local shelters/food at Vijayawada"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1587758632652",
+      "context": {},
+      "conditions": "@city:(Andhra Pradesh)",
+      "dialog_node": "response_3_1587807181064"
+    },
+    {
+      "type": "standard",
+      "title": "Location",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do you want Shelter There"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1587748483868",
+      "context": {
+        "place": "@sys-location"
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@sys-location",
+      "dialog_node": "node_8_1587748988875"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Good Evening"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1587806427642",
+      "conditions": "@greetings:(Good Evening)",
+      "dialog_node": "response_1_1587806555551",
+      "previous_sibling": "response_7_1587806512946"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            " Good Afternoon"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1587806427642",
+      "conditions": "@greetings:(Good Afternoon)",
+      "dialog_node": "response_7_1587806512946",
+      "previous_sibling": "response_4_1587806492555"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "I can help you by providing information about local shelter or food "
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1587806427642",
+      "conditions": "@greetings:Hello",
+      "dialog_node": "response_2_1587821897595",
+      "previous_sibling": "response_1_1587806555551"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Good Morning"
+              },
+              {
+                "text": "Good afternoon"
+              },
+              {
+                "text": "Good evening"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1587806427642",
+      "conditions": "@greetings:(Good Morning)",
+      "dialog_node": "response_4_1587806492555"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#General_Greetings",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_4_1587748110814",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_3_1587748615912",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "salutations",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You are Welcome !! Please Stay Safe"
+              },
+              {
+                "text": "My Pleasure ! Please Stay Safe"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@salutation:Okay ||     @salutation:(Thank You)",
+      "dialog_node": "node_3_1587748615912",
+      "previous_sibling": "node_7_1587748202297"
+    },
+    {
+      "type": "standard",
+      "title": "details",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How can I help you with food or shelter?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#details",
+      "dialog_node": "node_6_1587748483868",
+      "previous_sibling": "node_4_1587748110814"
+    },
+    {
+      "type": "standard",
+      "title": "enquiry",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#enquiry",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_7_1587748202297",
+      "previous_sibling": "node_6_1587748483868"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {},
+      "conditions": "welcome",
+      "dialog_node": "Welcome",
+      "previous_sibling": "node_7_1587806427642"
+    },
+    {
+      "type": "standard",
+      "title": "greet",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@greetings",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_7_1587806427642"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "COVID-19 helpline",
+  "language": "en",
+  "description": "we are providing information about food and shelter"
+}
